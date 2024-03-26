@@ -89,7 +89,7 @@
         <div class="col-md-8">
           <form action="#" method="post" onsubmit="return validateForm()">
             <div class="logo">
-              <img src="logo_dark_198_80.png" alt="logo" />
+              <img src="https://www.cuiatd.edu.pk/wp-content/uploads/2021/06/logo_dark_198_80.png" alt="logo" />
               <h2>Society Registration Form</h2>
             </div>
             <div class="mb-3">
@@ -112,7 +112,7 @@
 
             <div class="mb-3">
               <label for="dob" class="form-label">Date of Birth</label>
-              <input type="date" class="form-control" id="dob" max=""/>
+              <input type="date" class="form-control" id="dob" max="" />
               <span id="errorDob" class="error"></span>
             </div>
 
@@ -184,13 +184,14 @@
             </div>
 
             <div class="mb-3">
-              <button type="submit" class="btn btn-success" value="Submit" >Submit</button>
-              <br>
-              <p>click here to give</p>
-              <a href="https://forms.gle/Vmaob83R82hmNmeh8">
-                <p>Feedback!</p>
-              </a>
+              <button type="submit" class="btn btn-success" value="Submit">
+                Submit
+              </button>
+              <br />
             </div>
+            <button class="btn btn btn-success" href="https://forms.gle/mzcsa2Z8YHEwvCRh9">
+              Feedback
+            </button>
           </form>
         </div>
       </div>
@@ -302,7 +303,6 @@
         }
         return true;
       }
-      
 
       function validateGender(male, female, errorField, errorMessage) {
         if (!male && !female) {
@@ -321,12 +321,11 @@
       }
 
       function validateContactNumber(value, errorField) {
-        if (value === "")
-        {
+        if (value === "") {
           document.getElementById(errorField).innerText =
             "Must fill the contact number";
           return false;
-        }else if( value.length !== 11){
+        } else if (value.length !== 11) {
           document.getElementById(errorField).innerText =
             "Contact number must be 11 digits long.";
           return false;
@@ -383,7 +382,9 @@
 
         return urlPattern.test(url);
       }
-      document.getElementById("dob").max = new Date().toISOString().split("T")[0];
+      document.getElementById("dob").max = new Date()
+        .toISOString()
+        .split("T")[0];
     </script>
   </body>
 </html>
